@@ -1,0 +1,17 @@
+<!-- writing_assignment/tasks/templates/tasks/assignment_list.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assignment List</title>
+</head>
+<body>
+    <h1>Assignment List</h1>
+    <ul>
+        {% for assignment in assignments %}
+            <li>{{ assignment.title }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'create_assignment' %}">Create Assignment</a>
+</body>
+</html>

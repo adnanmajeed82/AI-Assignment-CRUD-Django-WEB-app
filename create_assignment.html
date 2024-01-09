@@ -1,0 +1,17 @@
+<!-- writing_assignment/tasks/templates/tasks/create_assignment.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Assignment</title>
+</head>
+<body>
+    <h1>Create Assignment</h1>
+    <form method="post" action="{% url 'create_assignment' %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form>
+    <a href="{% url 'assignment_list' %}">Back to Assignment List</a>
+</body>
+</html>

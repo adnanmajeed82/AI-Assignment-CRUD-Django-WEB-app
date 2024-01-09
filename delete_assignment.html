@@ -1,0 +1,17 @@
+<!-- writing_assignment/tasks/templates/tasks/delete_assignment.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Delete Assignment</title>
+</head>
+<body>
+    <h1>Delete Assignment</h1>
+    <p>Are you sure you want to delete "{{ assignment.title }}"?</p>
+    <form method="post" action="{% url 'delete_assignment' assignment.id %}">
+        {% csrf_token %}
+        <button type="submit">Delete</button>
+    </form>
+    <a href="{% url 'assignment_list' %}">Cancel and Back to Assignment List</a>
+</body>
+</html>

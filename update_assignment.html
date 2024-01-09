@@ -1,0 +1,17 @@
+<!-- writing_assignment/tasks/templates/tasks/update_assignment.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Assignment</title>
+</head>
+<body>
+    <h1>Update Assignment</h1>
+    <form method="post" action="{% url 'update_assignment' assignment.id %}">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Update</button>
+    </form>
+    <a href="{% url 'assignment_list' %}">Back to Assignment List</a>
+</body>
+</html>
